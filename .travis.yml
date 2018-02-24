@@ -19,5 +19,5 @@ before_script:
 
 script:
   - ls
-  - docker-compose up -d --verbose
+  - docker-compose --verbose up -d
   - docker-compose stop
