@@ -4,6 +4,7 @@ language: python
 
 python:
   - "2.7"
+
 services:
   - docker
 
@@ -23,9 +24,4 @@ before_script:
 
 script:
   - docker-compose up -d
-  - cd test
-  - docker-compose up -d --scale whoami=2
-  - python test.py
-  - docker-compose down
-  - cd ..
   - docker-compose down
