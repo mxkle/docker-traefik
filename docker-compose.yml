@@ -7,11 +7,8 @@ networks:
 services:
   proxy:
     image: traefik
-    command:
-      - '--api'
-      - '--docker'
-      - '--docker.domain=docker.localhost'
-      - '--loglevel=DEBUG'
+    container_name: traefik
+    command: --api --docker --docker.domain=docker.localhost --loglevel=DEBUG
     networks:
       - webgateway
     ports:
