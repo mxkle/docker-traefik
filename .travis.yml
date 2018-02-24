@@ -16,7 +16,7 @@ before_install:
   - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
 
 before_script:
-  - cd $GIT_DIR
+  - cd $TRAVIS_BUILD_DIR
 
 script:
   - ls
