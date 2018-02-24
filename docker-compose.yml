@@ -5,7 +5,7 @@ networks:
     driver: bridge
 
 services:
-  proxy:
+  traefik:
     image: traefik
     container_name: traefik
     command: --api --docker --docker.domain=docker.localhost --loglevel=DEBUG
