@@ -25,7 +25,7 @@ script:
   - docker-compose up -d
   - cd test
   - docker-compose up -d --scale whoami=2
-  - test.py
+  - python test.py
   - docker-compose down
   - cd ..
   - docker-compose down
