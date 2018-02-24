@@ -6,7 +6,7 @@ services:
 env:
   - DOCKER_COMPOSE_VERSION=1.4.2
   - GIT_DIR=docker-traefik
-  
+
 before_install:
   - sudo rm /usr/local/bin/docker-compose
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
@@ -18,7 +18,7 @@ before_install:
 before_script:
   - cd $GIT_DIR
 
-scripts:
+script:
   - ls
   - docker-compose up -d
   - docker-compose stop
