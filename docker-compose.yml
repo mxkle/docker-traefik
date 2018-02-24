@@ -8,7 +8,11 @@ services:
   traefik:
     image: traefik
     container_name: traefik
-    command: --api --docker --docker.domain=docker.localhost --loglevel=DEBUG
+    command:
+    - '--api'
+    - '--docker'
+    - '--docker.domain=docker.localhost' 
+    - '--loglevel=DEBUG'
     networks:
       - webgateway
     ports:
