@@ -11,7 +11,7 @@ services:
     command:
     - '--api'
     - '--docker'
-    - '--docker.domain=docker.localhost' 
+    - '--docker.domain=docker.local' 
     - '--loglevel=DEBUG'
     networks:
       - webgateway
